@@ -10,6 +10,13 @@ input = sys.stdin.readline
 # -------------------------------------------------------------
 # main
 # -------------------------------------------------------------
+N = int(input())
+W = list(map(int,input().split()))
 
+ans = 10**9
+for i in range(1,N):
+    x = sum(W[0:i])
+    y = sum(W[i:])
+    ans = min(ans, abs(x-y))
 
-
+print(ans)
