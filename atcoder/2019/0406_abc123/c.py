@@ -1,6 +1,7 @@
 # Python3 (3.4.3)
 import sys
 input = sys.stdin.readline
+from math import ceil,floor
 
 # -------------------------------------------------------------
 # function
@@ -10,3 +11,7 @@ input = sys.stdin.readline
 # -------------------------------------------------------------
 # main
 # -------------------------------------------------------------
+N = int(input())
+A = [int(input()) for _ in range(5)]
+
+print(ceil(N/min(A))+4)
