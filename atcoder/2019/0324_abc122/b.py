@@ -10,3 +10,17 @@ input = sys.stdin.readline
 # -------------------------------------------------------------
 # main
 # -------------------------------------------------------------
+S = input().rstrip()
+
+S += "Z"
+ans = 0
+
+cnt = 0
+for s in S:
+    if s in "ACGT":
+        cnt += 1
+    else:
+        ans = max(ans,cnt)
+        cnt = 0
+
+print(ans)
