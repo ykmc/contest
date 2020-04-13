@@ -10,3 +10,12 @@ input = sys.stdin.readline
 # -------------------------------------------------------------
 # main
 # -------------------------------------------------------------
+N = int(input())
+A = [int(input()) for _ in range(N)]
+
+from collections import Counter
+C = Counter(A).most_common()
+C.sort(reverse=True)
+
+print(C[1][0])
+
