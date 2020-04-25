@@ -10,3 +10,15 @@ input = sys.stdin.readline
 # -------------------------------------------------------------
 # main
 # -------------------------------------------------------------
+N,L = map(int,input().split())
+
+total = L*N
+for i in range(N):
+    total += i
+
+if L<=0 and L+N-1>=0:
+    print(total)
+elif L>0:
+    print(total - L)
+else:
+    print(total - (L+N-1))    
