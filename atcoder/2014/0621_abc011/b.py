@@ -10,3 +10,10 @@ input = sys.stdin.readline
 # -------------------------------------------------------------
 # main
 # -------------------------------------------------------------
+S = list(input().rstrip())
+
+ans = S[0].upper()
+for i in range(1,len(S)):
+    ans += S[i].lower()
+
+print(ans)
