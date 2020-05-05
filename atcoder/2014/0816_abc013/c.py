@@ -10,3 +10,18 @@ input = sys.stdin.readline
 # -------------------------------------------------------------
 # main
 # -------------------------------------------------------------
+N,H = map(int,input().split())
+A,B,C,D,E = map(int,input().split())
+
+# 毎日 A円の高い食事 を撮り続けるのが満腹度最大
+ans = A*N
+
+# A円の食事を取る回数で全探索
+for ai in range(N+1):
+    # C円の食事を取る回数
+    ci = max(0, -(H+ai*B-(N-ai)*E)//(D+E) + 1)
+
+    if ai+ci <= N:
+        ans = min(ans, A*ai + C*ci)
+
+print(ans)
