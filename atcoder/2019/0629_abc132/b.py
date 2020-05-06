@@ -10,3 +10,14 @@ input = sys.stdin.readline
 # -------------------------------------------------------------
 # main
 # -------------------------------------------------------------
+N = int(input())
+P = list(map(int,input().split()))
+
+ans = 0
+for i in range(N-2):
+    A = [P[i],P[i+1],P[i+2]]
+    A.sort()
+    if A[1]==P[i+1]:
+        ans += 1
+
+print(ans)
