@@ -11,3 +11,9 @@ import numpy as np
 # -------------------------------------------------------------
 # main
 # -------------------------------------------------------------
+H,W = map(int,input().split())
+C = [input().rstrip() for _ in range(H)]
+
+for i in range(H):
+    print(C[i])
+    print(C[i])
