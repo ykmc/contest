@@ -10,3 +10,12 @@ input = sys.stdin.readline
 # -------------------------------------------------------------
 # main
 # -------------------------------------------------------------
+N = int(input())
+D = list(map(int,input().split()))
+
+D.sort()
+
+abc_max = D[N//2-1]
+arc_min = D[N//2]
+
+print(max(0,arc_min - abc_max))
