@@ -10,3 +10,15 @@ input = sys.stdin.readline
 # -------------------------------------------------------------
 # main
 # -------------------------------------------------------------
+N = int(input())
+AB = [tuple(map(int,input().split())) for _ in range(N)]
+
+L = 1000002
+X = [0]*L
+for a,b in AB:
+    X[a] += 1
+    X[b+1] -= 1
+for i in range(L-1):
+    X[i+1] += X[i]
+
+print(max(X))
