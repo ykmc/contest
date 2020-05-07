@@ -10,3 +10,14 @@ input = sys.stdin.readline
 # -------------------------------------------------------------
 # main
 # -------------------------------------------------------------
+N = int(input())
+A = list(map(int,input().split()))
+
+total = sum(A)
+Ans = [0]*N
+
+Ans[0] = total - sum(A[1::2])*2
+for i in range(1,N):
+    Ans[i] = (A[i-1] - Ans[i-1]//2)*2
+
+print(" ".join(map(str,Ans)))
