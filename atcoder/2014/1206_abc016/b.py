@@ -10,3 +10,17 @@ input = sys.stdin.readline
 # -------------------------------------------------------------
 # main
 # -------------------------------------------------------------
+A,B,C = map(int,input().split())
+
+if A+B==C:
+    if A-B==C:
+        ans = "?"
+    else:
+        ans = "+"
+else:
+    if A-B==C:
+        ans = "-"
+    else:
+        ans = "!"
+
+print(ans)
