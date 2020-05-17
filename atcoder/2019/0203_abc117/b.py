@@ -10,3 +10,9 @@ input = sys.stdin.readline
 # -------------------------------------------------------------
 # main
 # -------------------------------------------------------------
+N = int(input())
+L = list(map(int,input().split()))
+
+maxL = max(L)
+
+print("Yes" if sum(L)-maxL > maxL else "No")
