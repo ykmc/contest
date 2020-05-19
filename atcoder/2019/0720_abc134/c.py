@@ -10,3 +10,10 @@ input = sys.stdin.readline
 # -------------------------------------------------------------
 # main
 # -------------------------------------------------------------
+N = int(input())
+A = [int(input()) for _ in range(N)]
+
+B = sorted(A)
+
+for i in range(N):
+    print(B[-1] if A[i] != B[-1] else B[-2])
