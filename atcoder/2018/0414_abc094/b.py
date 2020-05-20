@@ -10,3 +10,14 @@ input = sys.stdin.readline
 # -------------------------------------------------------------
 # main
 # -------------------------------------------------------------
+N,M,X = map(int,input().split())
+A = list(map(int,input().split()))
+
+l,r = 0,0
+for a in A:
+    if a < X:
+        l += 1
+    else:
+        r += 1
+
+print(min(l,r))
