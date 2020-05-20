@@ -10,3 +10,17 @@ input = sys.stdin.readline
 # -------------------------------------------------------------
 # main
 # -------------------------------------------------------------
+X = input().rstrip()
+
+i = 0
+ans = "YES"
+while i < len(X):
+    if i+1 < len(X) and X[i]=="c" and X[i+1]:
+        i += 2
+    elif X[i] in "oku":
+        i += 1
+    else:
+        ans = "NO"
+        break
+
+print(ans)
