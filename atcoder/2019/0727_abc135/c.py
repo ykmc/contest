@@ -10,3 +10,19 @@ input = sys.stdin.readline
 # -------------------------------------------------------------
 # main
 # -------------------------------------------------------------
+N = int(input())
+A = list(map(int,input().split()))
+B = list(map(int,input().split()))
+
+ans = 0
+for i in range(N):
+    # i 番目の勇者が i 番目の街で倒せるモンスターの最大数
+    ans += min(A[i],B[i])
+    # i番目の勇者の余力 r
+    r = max(0,B[i]-A[i])
+    # i+1 番目の街のモンスターをついでに倒しておく
+    d = min(A[i+1],r)
+    ans += d
+    A[i+1] -= d
+
+print(ans)
