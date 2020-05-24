@@ -10,3 +10,8 @@ input = sys.stdin.readline
 # -------------------------------------------------------------
 # main
 # -------------------------------------------------------------
+N,X = map(int,input().split())
+M = [int(input()) for _ in range(N)]
+
+r = X - sum(M)
+print(N + r//min(M))
