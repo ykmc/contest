@@ -10,3 +10,13 @@ input = sys.stdin.readline
 # -------------------------------------------------------------
 # main
 # -------------------------------------------------------------
+A,B,C,X,Y = map(int,input().split())
+
+ans = 0
+Z = min(X,Y)
+if A+B >= C*2:
+    ans = min(C*Z*2 + A*(X-Z) + B*(Y-Z), C*max(X,Y)*2)
+else:
+    ans = A*X + B*Y
+
+print(ans)
