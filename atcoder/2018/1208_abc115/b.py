@@ -10,3 +10,8 @@ input = sys.stdin.readline
 # -------------------------------------------------------------
 # main
 # -------------------------------------------------------------
+N = int(input())
+P = [int(input()) for _ in range(N)]
+
+maxP = max(P)
+print(sum(P) - maxP//2)
