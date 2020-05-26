@@ -10,3 +10,12 @@ input = sys.stdin.readline
 # -------------------------------------------------------------
 # main
 # -------------------------------------------------------------
+S = input().rstrip()
+
+ans = 1000
+
+l = len(S)
+for i in range(l-2):
+    ans = min(ans, abs(753 - int(S[i:i+3])))
+
+print(ans)
