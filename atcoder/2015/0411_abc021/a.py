@@ -10,3 +10,15 @@ input = sys.stdin.readline
 # -------------------------------------------------------------
 # main
 # -------------------------------------------------------------
+N = int(input())
+
+Ans = []
+if N%2==1:
+    Ans.append(1)
+    N -= 1
+for i in range(N//2):
+    Ans.append(2)
+
+print(len(Ans))
+for ans in Ans:
+    print(ans)
