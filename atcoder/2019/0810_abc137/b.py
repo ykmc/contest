@@ -10,3 +10,10 @@ input = sys.stdin.readline
 # -------------------------------------------------------------
 # main
 # -------------------------------------------------------------
+K,X = map(int,input().split())
+
+Ans = []
+for i in range(X-K+1,X+K):
+    Ans.append(i)
+
+print(*Ans)
