@@ -10,3 +10,14 @@ input = sys.stdin.readline
 # -------------------------------------------------------------
 # main
 # -------------------------------------------------------------
+x = int(input())
+
+A = [1]
+for i in range(x+1):
+    for j in range(2,x+1):
+        if i**j <= x and i**j not in A:
+            A.append(i**j)
+        if i**j > x:
+            break
+
+print(max(A))
