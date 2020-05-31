@@ -10,3 +10,12 @@ input = sys.stdin.readline
 # -------------------------------------------------------------
 # main
 # -------------------------------------------------------------
+S = input().rstrip()
+T = input().rstrip()
+
+ans = 0
+for i in range(3):
+    if S[i] == T[i]:
+        ans += 1
+
+print(ans)
