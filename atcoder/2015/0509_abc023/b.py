@@ -10,3 +10,21 @@ input = sys.stdin.readline
 # -------------------------------------------------------------
 # main
 # -------------------------------------------------------------
+N = int(input())
+S = input().rstrip()
+
+ans = -1
+if N%2 != 0:
+    M = N//2 
+    T = "b"
+    for i in range(M):
+        if i%3 == 0:
+            T = "a" + T + "c"
+        elif i%3 == 1:
+            T = "c" + T + "a"
+        else:
+            T = "b" + T + "b"
+    if S == T :
+        ans = M
+
+print(ans)
