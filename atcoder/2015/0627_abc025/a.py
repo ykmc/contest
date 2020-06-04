@@ -10,3 +10,10 @@ input = sys.stdin.readline
 # -------------------------------------------------------------
 # main
 # -------------------------------------------------------------
+S = input().rstrip()
+N = int(input())
+
+from itertools import product
+P = list(product(S, repeat=2))
+
+print("".join(P[N-1]))
