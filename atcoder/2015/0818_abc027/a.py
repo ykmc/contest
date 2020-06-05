@@ -10,3 +10,9 @@ input = sys.stdin.readline
 # -------------------------------------------------------------
 # main
 # -------------------------------------------------------------
+L = list(map(int,input().split()))
+from collections import Counter
+
+C = Counter(L).most_common()
+
+print(C[-1][0])
