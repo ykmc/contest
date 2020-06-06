@@ -10,3 +10,11 @@ input = sys.stdin.readline
 # -------------------------------------------------------------
 # main
 # -------------------------------------------------------------
+N = int(input())
+
+from itertools import product
+Ans = list(product("abc", repeat=N))
+Ans.sort()
+
+for ans in Ans:
+    print("".join(ans))
