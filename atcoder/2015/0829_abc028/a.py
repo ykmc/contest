@@ -10,3 +10,15 @@ input = sys.stdin.readline
 # -------------------------------------------------------------
 # main
 # -------------------------------------------------------------
+N = int(input())
+
+if 0 <= N <= 59:
+    ans = "Bad"
+elif 60 <= N <= 89:
+    ans = "Good"
+elif 90 <= N <= 99:
+    ans = "Great"
+else:
+    ans = "Perfect"
+
+print(ans)
