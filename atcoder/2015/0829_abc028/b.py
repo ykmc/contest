@@ -10,3 +10,17 @@ input = sys.stdin.readline
 # -------------------------------------------------------------
 # main
 # -------------------------------------------------------------
+S = input().rstrip()
+from collections import Counter
+
+D = dict(Counter(S))
+
+Ans = []
+for x in "ABCDEF":
+    ans = D.get(x)
+    if ans:
+        Ans.append(ans)
+    else:
+        Ans.append(0)
+
+print(*Ans)
