@@ -10,3 +10,11 @@ input = sys.stdin.readline
 # -------------------------------------------------------------
 # main
 # -------------------------------------------------------------
+A = int(input())
+B = int(input())
+C = int(input())
+
+for i in range(C,50000):
+    if i%A==0 and i%B==0:
+        print(i)
+        sys.exit()
