@@ -10,3 +10,11 @@ input = sys.stdin.readline
 # -------------------------------------------------------------
 # main
 # -------------------------------------------------------------
+S = input().rstrip()
+K = int(input())
+
+Ans = set()
+for i in range(len(S)-K+1):
+    Ans.add(S[i:i+K])
+
+print(len(Ans))
