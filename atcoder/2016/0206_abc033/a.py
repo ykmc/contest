@@ -10,3 +10,9 @@ input = sys.stdin.readline
 # -------------------------------------------------------------
 # main
 # -------------------------------------------------------------
+N = input().rstrip()
+
+from collections import Counter
+C = Counter(N).most_common()
+
+print("SAME" if C[0][1] == 4 else "DIFFERENT")
