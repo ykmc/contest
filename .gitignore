@@ -1,3 +1,9 @@
 # local tools
 tools/
 atcoder/problem-models.json
+
+# atcoder-cli & online-judge-tools
+a.out
+
+# cargo atcoder
+target/
