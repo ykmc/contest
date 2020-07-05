@@ -29,7 +29,7 @@ def main():
                     prev[nv] = v
                     dq.append(nv)
                 # 次が 0番目(開始地点) なら閉路あり
-                if dist[nv] == 0:
+                if dist[nv] == 0 and prev[nv] == -1:
                     prev[nv] = v
 
         # 開始地点の前 が -1でない => 閉路あり
